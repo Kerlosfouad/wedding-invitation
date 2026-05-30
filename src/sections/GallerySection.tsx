@@ -12,8 +12,8 @@ const galleryImages = [
   { src: '/assets/gallery-2.jpg', alt: { ar: 'قاعة الحفل', en: 'Wedding Venue' }, span: 'normal' },
   { src: '/assets/gallery-3.jpg', alt: { ar: 'العروس', en: 'The Bride' }, span: 'tall' },
   { src: '/assets/gallery-4.jpg', alt: { ar: 'الاستقبال', en: 'The Reception' }, span: 'normal' },
-  { src: '/assets/gallery-5.jpg', alt: { ar: 'خواتم الزواج', en: 'Wedding Rings' }, span: 'tall' },
-  { src: '/assets/gallery-6.jpg', alt: { ar: 'العريس', en: 'The Groom' }, span: 'normal' },
+  { src: '/assets/gallery-5.jpg', alt: { ar: 'العريس', en: 'The Groom' }, span: 'normal' },
+  { src: '/assets/gallery-6.jpg', alt: { ar: 'خواتم الزواج', en: 'Wedding Rings' }, span: 'normal' },
 ];
 
 export default function GallerySection() {
