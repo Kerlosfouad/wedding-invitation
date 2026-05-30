@@ -85,7 +85,7 @@ export default function EnvelopeOverlay() {
           <div className="flex flex-col items-center justify-center h-full px-4 gap-1">
             <OrnamentalDivider width={100} />
             <p className="font-vibes text-burgundy text-xl md:text-2xl text-center mt-2">
-              حفلة زفاف
+              Wedding Celebration
             </p>
             <p className="font-cairo text-burgundy-light text-xs md:text-sm text-center opacity-75">
               {t('envelope_invite')}
