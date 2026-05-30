@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 350 100% 12%;
+    --foreground: 33 60% 90%;
+    --card: 350 100% 12%;
+    --card-foreground: 33 60% 90%;
+    --popover: 350 100% 12%;
+    --popover-foreground: 33 60% 90%;
+    --primary: 45 65% 52%;
+    --primary-foreground: 350 100% 8%;
+    --secondary: 350 100% 18%;
+    --secondary-foreground: 33 60% 90%;
+    --muted: 350 100% 18%;
+    --muted-foreground: 33 30% 70%;
+    --accent: 350 100% 18%;
+    --accent-foreground: 33 60% 90%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 45 65% 52%;
+    --input: 350 100% 18%;
+    --ring: 45 65% 52%;
+    --radius: 0.5rem;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    @apply bg-burgundy-dark text-champagne;
+    font-family: 'Cairo', 'Inter', sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #3D000A;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(212, 175, 55, 0.3);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(212, 175, 55, 0.5);
+  }
+
+  /* Selection */
+  ::selection {
+    background: rgba(212, 175, 55, 0.3);
+    color: #F4E7D3;
+  }
+
+  /* Focus styles */
+  *:focus-visible {
+    outline: 2px solid #D4AF37;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .glass-card {
+    background: rgba(90, 0, 15, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 12px;
+  }
+
+  .glass-card-strong {
+    background: rgba(90, 0, 15, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 12px;
+  }
+
+  .gold-border {
+    border: 1px solid rgba(212, 175, 55, 0.3);
+  }
+
+  .gold-text-shimmer {
+    background: linear-gradient(
+      90deg,
+      #D4AF37 0%,
+      #E8C84D 25%,
+      #D4AF37 50%,
+      #E8C84D 75%,
+      #D4AF37 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 4s linear infinite;
+  }
+
+  .text-gold {
+    color: #D4AF37;
+  }
+
+  .text-champagne {
+    color: #F4E7D3;
+  }
+
+  .bg-burgundy {
+    background-color: #5A000F;
+  }
+
+  .bg-burgundy-dark {
+    background-color: #3D000A;
+  }
+
+  .bg-luxury-red {
+    background-color: #8B0015;
+  }
+
+  .bg-gold {
+    background-color: #D4AF37;
+  }
+}
+
+@layer utilities {
+  .luxury-ease {
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  .perspective-1200 {
+    perspective: 1200px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+}
