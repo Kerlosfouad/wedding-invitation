@@ -44,8 +44,8 @@ export default function EnvelopeOverlay() {
       ease: 'power2.out',
     });
 
-    // Phase 4: Wait 5s then zoom out
-    tl.to(envelopeRef.current, { scale: 2.5, opacity: 0, duration: 0.8, ease: 'power3.in' }, '+=5');
+    // Phase 4: Wait 4s then zoom out
+    tl.to(envelopeRef.current, { scale: 2.5, opacity: 0, duration: 0.8, ease: 'power3.in' }, '+=4');
   }, [opening, setAppPhase]);
 
   // Idle float

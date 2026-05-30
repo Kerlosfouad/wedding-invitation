@@ -11,8 +11,8 @@ interface AppState {
 }
 
 export const useAppStore = create<AppState>((set) => ({
-  locale: 'ar',
-  direction: 'rtl',
+  locale: 'en',
+  direction: 'ltr',
   appPhase: 'envelope',
   setLocale: (locale) =>
     set({
