@@ -103,17 +103,18 @@ export default function GallerySection() {
               <div
                 className={`
                   relative overflow-hidden
-                  ${img.span === 'tall' ? 'h-[300px] md:h-[500px]' : 'h-[145px] md:h-[240px]'}
+                  ${img.span === 'tall' ? 'h-[300px] md:h-[500px]' : i >= 4 ? 'h-[200px] md:h-[240px]' : 'h-[145px] md:h-[240px]'}
                 `}
               >
                 <img
                   src={img.src}
                   alt={img.alt[locale]}
-                  className="
+                  className={`
                     w-full h-full object-cover
                     transition-transform duration-500 ease-out
                     group-hover:scale-110
-                  "
+                    ${i === 5 ? 'object-top' : ''}
+                  `}
                   loading="lazy"
                 />
                 {/* Hover overlay */}
