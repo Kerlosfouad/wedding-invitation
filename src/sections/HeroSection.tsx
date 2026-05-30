@@ -136,7 +136,7 @@ export default function HeroSection() {
     <section
       ref={sectionRef}
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24"
+      className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-20"
     >
       {/* Animated gradient background */}
       <div
@@ -162,7 +162,7 @@ export default function HeroSection() {
       {/* Content */}
       <div
         ref={contentRef}
-        className="relative z-10 flex flex-col items-center text-center px-6 animate-zoom-cinematic"
+        className="relative z-10 flex flex-col items-center text-center px-6"
       >
         {/* Opening phrase */}
         <p
