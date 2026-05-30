@@ -12,7 +12,7 @@ export default function StorySection() {
   const sectionRef = useRef<HTMLElement>(null);
   const portraitRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
-  const { t, locale } = useTranslation();
+  const { t } = useTranslation();
 
   useGSAP(() => {
     if (!sectionRef.current) return;
