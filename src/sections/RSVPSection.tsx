@@ -6,6 +6,7 @@ import { useTranslation } from '@/hooks/useTranslation';
 import { Minus, Plus } from 'lucide-react';
 import LuxuryButton from '@/components/LuxuryButton';
 import FloralDecoration from '@/components/FloralDecoration';
+import { useAdminStore } from '@/stores/adminStore';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -25,6 +26,7 @@ export default function RSVPSection() {
   const [submitting, setSubmitting] = useState(false);
 
   const { t, locale } = useTranslation();
+  const addRSVP = useAdminStore((s) => s.addRSVP);
 
   useGSAP(() => {
     if (!sectionRef.current || submitted) return;
@@ -128,7 +130,14 @@ export default function RSVPSection() {
 
     // Simulate API call
     await new Promise((resolve) => setTimeout(resolve, 1000));
-    console.log('RSVP submitted:', formData);
+
+    // Save to admin store
+    addRSVP({
+      name: formData.name,
+      attending: formData.attending!,
+      guestCount: formData.guestCount,
+      notes: formData.notes,
+    });
 
     setSubmitting(false);
     setSubmitted(true);

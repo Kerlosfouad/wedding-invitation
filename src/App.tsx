@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useAppStore } from '@/stores/useAppStore';
 import GoldDustCanvas from '@/components/GoldDustCanvas';
 import Navigation from '@/components/Navigation';
+import AdminDashboard from '@/components/AdminDashboard';
 import EnvelopeOverlay from '@/sections/EnvelopeOverlay';
 import GuestGate from '@/sections/GuestGate';
 import HeroSection from '@/sections/HeroSection';
@@ -74,6 +75,9 @@ export default function App() {
     <div className="relative min-h-screen">
       {/* WebGL Gold Dust Background - always visible */}
       <GoldDustCanvas />
+
+      {/* Admin Dashboard */}
+      <AdminDashboard />
 
       {/* Phase 1: Envelope Overlay */}
       {appPhase === 'envelope' && <EnvelopeOverlay />}
